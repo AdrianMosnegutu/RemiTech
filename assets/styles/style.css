@@ -19,6 +19,7 @@ html {
 
 h1 {
   font-size: 3.5rem;
+  text-align: center;
 }
 
 h2 {
@@ -185,14 +186,16 @@ main {
 .about-container {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .company-description {
   display: flex;
+  max-width: 22.5rem;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-  flex: 1;
   text-align: center;
 }
 
@@ -213,8 +216,8 @@ main {
 .news-container {
   width: 100%;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .latest-article {
@@ -252,13 +255,13 @@ main {
   align-items: center;
   gap: 1.5rem;
   cursor: pointer;
-  border-top: 1px solid #000;
+  border-top: 1px solid gray;
   transition: background-color 200ms ease-out;
   padding-right: 1.5rem;
 }
 
 .news-article:last-child {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid gray;
 }
 
 .news-article:hover {
@@ -297,14 +300,14 @@ main {
   display: flex;
   justify-content: space-between;
   margin-bottom: 3rem;
+  flex-wrap: wrap;
 }
 
 .project {
   display: flex;
   flex-direction: column;
   width: 21.5rem;
-  height: 26rem;
-  border: thin solid var(--text-color);
+  height: 28rem;
   border-radius: 0.5rem;
   padding: 1rem;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
@@ -353,9 +356,114 @@ main {
 
 /* Team */
 
+.team-container {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 75px;
+}
+
+.team-member {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.team-member:nth-child(even) {
+  text-align: end;
+}
+
+.team-member:not(:last-child) {
+  padding-bottom: 75px;
+  border-bottom: thin solid lightgray;
+}
+
+.team-member .thumbnail {
+  width: 18rem;
+  aspect-ratio: 9 / 10;
+  background-color: gray;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.5);
+}
+
+.team-member-description {
+  display: flex;
+  flex-direction: column;
+  max-width: 28rem;
+  gap: 1.5rem;
+}
+
+.team-member-description article {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.member-one .thumbnail {
+  background: url("../images/member-one-thumbnail.avif") center center/cover;
+}
+
+.member-two .thumbnail {
+  background: url("../images/member-two-thumbnail.jpg") center center/cover;
+}
+
+.member-three .thumbnail {
+  background: url("../images/member-three-thumbnail.jpg") top center/cover;
+}
+
+.member-four .thumbnail {
+  background: url("../images/member-four-thumbnail.avif") -200px center/cover;
+}
+
 /* Footer */
 
 footer {
+  height: 12.5rem;
   color: var(--bg-main);
-  background-color: var(--text-color);
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+ul.contact {
+  gap: 1.5rem;
+}
+
+.contact i {
+  font-size: 1.5rem;
+}
+
+.social-media i {
+  font-size: 2.5rem;
+}
+
+.social-media a {
+  color: var(--bg-main);
+  transition: color 200ms ease-out;
+}
+
+.social-media a:hover {
+  color: var(--accent-color);
+}
+
+.copyright-info {
+  position: absolute;
+  left: 0.5rem;
+  bottom: 0.5rem;
 }
