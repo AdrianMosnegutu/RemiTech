@@ -1,0 +1,205 @@
+/* Universal Styles */
+
+:root {
+  --font-family: Spinnaker;
+  --font-size: 20px;
+
+  --bg-main: rgb(245, 245, 245);
+  --text-color: #202020;
+  --accent-color: #cc0000;
+}
+
+html {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+
+  color: var(--text-color);
+  background-color: var(--bg-main);
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+q {
+  font-style: italic;
+  font-weight: lighter;
+}
+
+a,
+em {
+  color: var(--accent-color);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header,
+main,
+footer {
+  position: relative;
+  top: 4rem;
+}
+
+/* Navigation */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 4rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 50%);
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background-color: var(--bg-main);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-basis: 1500px;
+}
+
+.logo {
+  font-size: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+}
+
+.logo h3 {
+  margin-left: 0.5rem;
+  font-size: 2rem;
+}
+
+.logo:hover {
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  flex-basis: 550px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links a {
+  font-size: 1.25rem;
+  color: var(--text-color);
+  transition: color 100ms ease-out;
+}
+
+.nav-links a:hover {
+  color: var(--accent-color);
+}
+
+/* Header */
+
+header {
+  background-blend-mode: color;
+  background: url("../images/hero-cover.webp") rgba(0, 0, 0, 50%) center
+    center/cover;
+  width: 100%;
+  height: 85vh;
+  color: var(--bg-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  z-index: -1;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #fff;
+  padding: 75px;
+  text-align: center;
+  max-width: 40rem;
+}
+
+.header-container h1 {
+  border-bottom: 1px solid var(--bg-main);
+  padding: 1rem;
+}
+
+.header-container q {
+  margin: 1.5rem 0 0.75rem;
+  width: 100%;
+}
+
+.header-container q,
+.header-container p {
+  font-family: "Inria Serif";
+  font-size: 1.2rem;
+}
+
+.header-container p {
+  font-weight: bold;
+}
+
+/* Main */
+
+main {
+  background-color: var(--bg-main);
+}
+
+.frame {
+  background-color: var(--bg-main);
+  padding: 150px 0;
+  margin: 0 200px;
+}
+
+.frame:not(:last-child) {
+  border-bottom: 2px solid lightgray;
+}
+
+.frame h1 {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+/* About */
+
+.about-container {
+  display: flex;
+}
+
+.company-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  flex: 1 0 0;
+  text-align: center;
+}
+
+.company-description p {
+  font-size: 1.2rem;
+}
+
+.company-description i {
+  font-size: 100px;
+}
+
+/* Footer */
+
+footer {
+  color: var(--bg-main);
+  background-color: var(--text-color);
+}
