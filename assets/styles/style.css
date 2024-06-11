@@ -27,7 +27,11 @@ h2 {
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-weight: lighter;
 }
 
 q {
@@ -125,6 +129,7 @@ header {
   align-items: center;
   position: sticky;
   z-index: -1;
+  padding: 60px;
 }
 
 .header-container {
@@ -164,8 +169,8 @@ main {
   background-color: var(--bg-main);
 }
 
-.frame {
-  max-width: 69rem;
+section {
+  max-width: 70rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -174,12 +179,16 @@ main {
   margin: 0 auto;
 }
 
-.frame:not(:last-child) {
+section:not(:last-child) {
   border-bottom: 2px solid lightgray;
 }
 
-.frame h1 {
+section h1 {
   margin-bottom: 5rem;
+}
+
+.thumbnail {
+  background: center center/cover;
 }
 
 /* About */
@@ -188,27 +197,24 @@ main {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 3rem;
 }
 
-.company-description {
+.about-item {
   display: flex;
-  max-width: 22.5rem;
+  max-width: 20rem;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
   text-align: center;
 }
 
-.company-description h2 {
+.about-item h2 {
   text-decoration: underline;
 }
 
-.company-description p {
-  padding: 0 2rem;
-}
-
-.company-description i {
+.about-item i {
   font-size: 100px;
 }
 
@@ -217,12 +223,13 @@ main {
 .products-container {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 3rem;
   flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
-.product {
+.product-item {
   display: flex;
   flex-direction: column;
   width: 22rem;
@@ -231,17 +238,15 @@ main {
   padding: 1rem;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
   gap: 1.5rem;
-  margin-bottom: 1.5rem;
 }
 
-.product .thumbnail {
+.product-item .thumbnail {
   width: 100%;
   height: 175px;
-  background: #d9d9d9;
   border-radius: 0.5rem;
 }
 
-.product-links {
+.product-icons {
   display: flex;
   flex-grow: 1;
   align-items: flex-end;
@@ -250,19 +255,19 @@ main {
   justify-content: space-between;
 }
 
-.product-links a {
+.product-icons a {
   display: flex;
   justify-content: flex-end;
   color: var(--text-color);
   transition: color 200ms ease-out;
 }
 
-.product-links a:hover {
+.product-icons a:hover {
   color: var(--accent-color);
   text-decoration: none;
 }
 
-.star-rating {
+.product-rating {
   display: flex;
   gap: 0.25rem;
 }
@@ -273,27 +278,27 @@ main {
 }
 
 .product-one .thumbnail {
-  background: url("../images/product-one-thumbnail.jpeg") center center/cover;
+  background-image: url("../images/product-one-thumbnail.jpeg");
 }
 
 .product-two .thumbnail {
-  background: url("../images/product-two-thumbnail.png") center center/cover;
+  background-image: url("../images/product-two-thumbnail.png");
 }
 
 .product-three .thumbnail {
-  background: url("../images/product-three-thumbnail.jpeg") center center/cover;
+  background-image: url("../images/product-three-thumbnail.jpeg");
 }
 
 .product-four .thumbnail {
-  background: url("../images/product-four-thumbnail.webp") center center/cover;
+  background-image: url("../images/product-four-thumbnail.webp");
 }
 
 .product-five .thumbnail {
-  background: url("../images/product-five-thumbnail.jpeg") center center/cover;
+  background-image: url("../images/product-five-thumbnail.jpeg");
 }
 
 .product-six .thumbnail {
-  background: url("../images/product-six-thumbnail.webp") center center/cover;
+  background-image: url("../images/product-six-thumbnail.webp");
 }
 
 .see-more-products {
@@ -305,30 +310,32 @@ main {
 .news-container {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 60px;
+  padding: 0 60px;
+}
+
+.news-container a {
+  align-self: flex-start;
 }
 
 .latest-article {
   display: flex;
   flex-direction: column;
-  width: 690px;
+  width: 30rem;
 }
 
 .latest-article .thumbnail {
   margin-bottom: 1.5rem;
   height: 12rem;
-  background: url("../images/main-article-thumbnail.jpeg") center center/cover;
+  background-image: url("../images/main-article-thumbnail.jpeg");
 }
 
 .latest-article article {
   display: flex;
   flex-direction: column;
   gap: 30px;
-}
-
-.news-container a {
-  align-self: flex-start;
 }
 
 .other-articles {
@@ -338,48 +345,49 @@ main {
   gap: 1rem;
 }
 
-.news-article {
-  height: 175px;
+.other-articles .thumbnail {
+  height: 7rem;
+  aspect-ratio: 1 / 1;
+}
+
+.news-item a {
   display: flex;
   align-items: center;
   gap: 1.5rem;
   cursor: pointer;
   border-top: 1px solid gray;
   transition: background-color 200ms ease-out;
-  padding-right: 1.5rem;
+  padding: 0.75rem;
+  color: var(--text-color);
 }
 
-.news-article:last-child {
+.news-item:last-child a {
   border-bottom: 1px solid gray;
 }
 
-.news-article:hover {
+.news-item a:hover {
   background-color: var(--bg-sec);
+  text-decoration: none;
 }
 
-.other-articles .thumbnail {
-  width: 15rem;
-  height: 100%;
+.news-item a time {
+  font-size: 0.9rem;
 }
 
-.news-article time {
-  font-size: 0.8rem;
-}
-
-.news-article p {
+.news-item a p {
   margin-top: 10px;
 }
 
-.article-one .thumbnail {
-  background: url("../images/article-one-thumbnail.webp") center center/cover;
+.news-one a .thumbnail {
+  background-image: url("../images/article-one-thumbnail.webp");
 }
 
-.article-two .thumbnail {
-  background: url("../images/article-two-thumbnail.jpeg") center center/cover;
+.news-two a .thumbnail {
+  background-image: url("../images/article-two-thumbnail.jpeg");
 }
 
-.article-three .thumbnail {
-  background: url("../images/article-three-thumbnail.jpeg") center center/cover;
+.news-three a .thumbnail {
+  background-image: url("../images/article-three-thumbnail.jpeg");
 }
 
 /* Team */
@@ -388,14 +396,19 @@ main {
   display: flex;
   flex-direction: column;
   gap: 4rem;
+  padding: 0 60px;
 }
 
 .team-member {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: center;
   gap: 5rem;
+}
+
+.team-member:nth-child(odd) {
+  flex-wrap: wrap-reverse;
 }
 
 .team-member:nth-child(even) {
@@ -410,7 +423,6 @@ main {
 .team-member .thumbnail {
   width: 18rem;
   aspect-ratio: 9 / 10;
-  background-color: gray;
   border-radius: 0.5rem;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
 }
@@ -429,19 +441,21 @@ main {
 }
 
 .member-one .thumbnail {
-  background: url("../images/member-one-thumbnail.avif") center center/cover;
+  background-image: url("../images/member-one-thumbnail.avif");
 }
 
 .member-two .thumbnail {
-  background: url("../images/member-two-thumbnail.jpg") center center/cover;
+  background-image: url("../images/member-two-thumbnail.jpg");
 }
 
 .member-three .thumbnail {
-  background: url("../images/member-three-thumbnail.jpg") top center/cover;
+  background-image: url("../images/member-three-thumbnail.jpg");
+  background-position: top;
 }
 
 .member-four .thumbnail {
-  background: url("../images/member-four-thumbnail.avif") -200px center/cover;
+  background-image: url("../images/member-four-thumbnail.avif");
+  background-position-x: -200px;
 }
 
 /* Footer */
@@ -463,17 +477,17 @@ footer {
   align-items: center;
 }
 
-.contact {
+.contact-information {
   display: flex;
   gap: 0.75rem;
   align-items: center;
 }
 
-ul.contact {
+ul.contact-information {
   gap: 1.5rem;
 }
 
-.contact i {
+.contact-information i {
   font-size: 1.5rem;
 }
 
@@ -492,6 +506,27 @@ ul.contact {
 
 .copyright-info {
   position: absolute;
-  left: 0.5rem;
-  bottom: 0.5rem;
+  left: 0.75rem;
+  bottom: 0.75rem;
+}
+
+/* Media Queries */
+
+@media (orientation: portrait) {
+  .nav-container {
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .logo h3 {
+    display: none;
+  }
+
+  .team-member:nth-child(even) {
+    text-align: start;
+  }
+
+  footer {
+    height: 17rem;
+  }
 }
