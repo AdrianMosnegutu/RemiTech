@@ -2,26 +2,26 @@
 
 ## Side project for Codecademy.com
 
-This website was made as an open-ended project during the Front-End Development course.
-It utilizes concepts such as semantic HTML, advanced styling with CSS and responsive
-design.
+This website was made as an open-ended project during the Front-End Development course. It utilizes concepts such as semantic HTML, advanced styling with CSS and responsive design.
 
-It functions as the main website for the fictional company RemiTech, located in France.
-The webpage is structured in 5 main sections: the hero, About, Products, News and Team.
+![hero section screenshot](/assets/screenshots/header-section-screenshot.png)
 
-The about section describes what makes the company stand out as not only a tech company,
-but also as a learning hub and a family.
+It functions as the main website for the fictional company RemiTech, located in France. The webpage is structured in 5 main sections: the hero, About, Products, News and Team.
 
-The products section lists some of their latest products. Each product contains a splash
-image, the product title, the date of release, a small description, a star rating and a
-link to the product's webpage.
+The about section describes what makes the company stand out as not only a tech company,but also as a learning hub and a family.
 
-The news section displays on one hand the latest news article, and on the other hand a
-list of previous news articles.
+![about section screenshot](/assets/screenshots/about-section-screenshot.png)
 
-Lastly, the team section lists the major members of the RemiTech family: the CEO, head
-of marketing, lead designer and product manager.
+The products section lists some of their latest products. Each product contains a splash image, the product title, the date of release, a small description, a star rating and a link to the product's webpage.
 
-![screenshot](Screenshot%202024-06-15%20at%2016.58.31.png)
+![products section screenshot](/assets/screenshots/products-section-screenshot.png)
+
+The news section displays on one hand the latest news article, and on the other hand a list of previous news articles.
+
+![products section screenshot](/assets/screenshots/news-section-screenshot.png)
+
+Lastly, the team section lists the major members of the RemiTech family: the CEO, head of marketing, lead designer and product manager.
+
+![products section screenshot](/assets/screenshots/team-section-screenshot.png)
 
 This project was meant to serve as a playground to test my practical knowledge about basic HTML and CSS concepts, as well as advanced concepts like flexbox and viewport scaling.
